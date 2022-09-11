@@ -1,0 +1,122 @@
+# Speaker Information--------------------------------------------------------------------------------------------------------------------------------
+Name: _
+Age: 30
+Sex: M
+Date: 2022-09-10 08:27:02.884998
+
+# Classification Information-------------------------------------------------------------------------------------------------------------------------
+Experiment: train-101M_test-101M
+Data: small-subset
+
+# Modelparameters------------------------------------------------------------------------------------------------------------------------------------
+classifier    num-estimators    criterion    max_depth    max_features    min_samples_split    min_samples_leaf
+         1               100         gini           20            sqrt                   10                   5
+         2               100         gini           20            sqrt                   10                   5
+         3               100         gini           20            sqrt                   10                   5
+         4               100         gini           20            sqrt                   10                   5
+         5               100         gini           20            sqrt                   10                   5
+         6               100         gini           20            sqrt                   10                   5
+         7               100         gini           20            sqrt                   10                   5
+         8               100         gini           20            sqrt                   10                   5
+
+# Results--------------------------------------------------------------------------------------------------------------------------------------------
+class 0-vs-i    mean-accuracy    recall    precison    f1-score
+           1             0.76      0.85        0.72        0.78
+           2             0.81      0.97        0.73        0.84
+           3             0.79      0.86        0.77        0.81
+           4             0.80      0.79        0.79        0.79
+           5             0.75      0.74        0.74        0.74
+           6             0.84      1.00        0.79        0.88
+           7             0.81      0.95        0.76        0.84
+           8             0.84      0.90        0.80        0.85
+
+# Feature Importances--------------------------------------------------------------------------------------------------------------------------------
+feature-name                                          block 10_20    block 20_30    block 30_40    block 40_50    block 50_60    block 60_70    block 70_80    block 80_90    
+F0semitoneFrom27.5Hz_sma3nz_amean                            0.01         0.0072          0.016          0.025          0.024          0.025          0.021          0.036    
+F0semitoneFrom27.5Hz_sma3nz_stddevNorm                     0.0031         0.0045         0.0015         0.0015         0.0025         0.0093         0.0019         0.0057    
+F0semitoneFrom27.5Hz_sma3nz_percentile20.0                  0.004         0.0043         0.0072          0.034         0.0075          0.038          0.026           0.06    
+F0semitoneFrom27.5Hz_sma3nz_percentile50.0                 0.0096         0.0093          0.036          0.043          0.029          0.024          0.053          0.046    
+F0semitoneFrom27.5Hz_sma3nz_percentile80.0                 0.0043         0.0016         0.0058          0.017           0.02          0.013          0.011         0.0071    
+F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2                  0.00068         0.0058         0.0044         0.0031         0.0041         0.0063         0.0027         0.0031    
+F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope                0.0044         0.0055         0.0048        0.00055         0.0006         0.0049           0.01         0.0012    
+F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope              0.0027         0.0036         0.0019         0.0026         0.0011         0.0055         0.0056        0.00031    
+F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope               0.0023         0.0068         0.0031        0.00081         0.0021         0.0043         0.0017         0.0031    
+F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope             0.0019         0.0012         0.0037         0.0022         0.0038         0.0052         0.0016         0.0045    
+loudness_sma3_amean                                         0.009         0.0065         0.0012         0.0048         0.0098          0.009          0.014          0.016    
+loudness_sma3_stddevNorm                                   0.0074         0.0041         0.0048        0.00097         0.0025         0.0069         0.0018         0.0044    
+loudness_sma3_percentile20.0                                0.014            0.0         0.0028         0.0054          0.011         0.0019         0.0086         0.0066    
+loudness_sma3_percentile50.0                                0.002         0.0041        0.00041         0.0032          0.019         0.0025          0.011          0.011    
+loudness_sma3_percentile80.0                               0.0025          0.011         0.0024          0.002          0.016          0.022          0.035          0.025    
+loudness_sma3_pctlrange0-2                                 0.0033           0.01         0.0013         0.0014         0.0058          0.019          0.011          0.011    
+loudness_sma3_meanRisingSlope                              0.0077          0.012         0.0017           0.01          0.021          0.037          0.033          0.023    
+loudness_sma3_stddevRisingSlope                            0.0037         0.0028          0.003         0.0035         0.0041          0.022          0.003         0.0067    
+loudness_sma3_meanFallingSlope                              0.018         0.0064         0.0025         0.0022          0.019          0.014          0.047          0.014    
+loudness_sma3_stddevFallingSlope                           0.0054         0.0037         0.0013         0.0034         0.0072          0.015          0.027          0.017    
+spectralFlux_sma3_amean                                     0.019          0.014         0.0065          0.012          0.037          0.031          0.047          0.049    
+spectralFlux_sma3_stddevNorm                               0.0055         0.0038         0.0029         0.0031          0.002         0.0032         0.0046         0.0052    
+mfcc1_sma3_amean                                           0.0065          0.002         0.0033         0.0024         0.0043           0.01         0.0025         0.0069    
+mfcc1_sma3_stddevNorm                                      0.0036         0.0064         0.0082         0.0029        0.00057         0.0039         0.0057         0.0036    
+mfcc2_sma3_amean                                            0.012          0.009          0.017         0.0048         0.0053         0.0058         0.0033         0.0034    
+mfcc2_sma3_stddevNorm                                      0.0089         0.0051          0.012          0.003         0.0056         0.0029         0.0057         0.0096    
+mfcc3_sma3_amean                                           0.0031         0.0063         0.0044          0.007         0.0055         0.0039         0.0066         0.0062    
+mfcc3_sma3_stddevNorm                                      0.0052         0.0021         0.0016         0.0059          0.002         0.0058         0.0025         0.0037    
+mfcc4_sma3_amean                                           0.0082         0.0038         0.0093         0.0043         0.0081          0.003         0.0038         0.0092    
+mfcc4_sma3_stddevNorm                                      0.0055         0.0041         0.0027         0.0036         0.0057         0.0019        0.00017         0.0022    
+jitterLocal_sma3nz_amean                                   0.0014         0.0039         0.0011         0.0054         0.0036        0.00074          0.002         0.0048    
+jitterLocal_sma3nz_stddevNorm                              0.0059         0.0045         0.0036         0.0013         0.0037         0.0069        0.00076         0.0008    
+shimmerLocaldB_sma3nz_amean                                0.0088         0.0012         0.0081          0.011          0.019          0.007         0.0098          0.018    
+shimmerLocaldB_sma3nz_stddevNorm                           0.0012          0.006         0.0049         0.0031         0.0065         0.0034         0.0014         0.0027    
+HNRdBACF_sma3nz_amean                                      0.0016         0.0057         0.0022         0.0069          0.015         0.0065         0.0017          0.018    
+HNRdBACF_sma3nz_stddevNorm                                 0.0089         0.0076         0.0059         0.0015         0.0067         0.0036         0.0052         0.0016    
+logRelF0-H1-H2_sma3nz_amean                                  0.17           0.13           0.15           0.14           0.09          0.075          0.072          0.095    
+logRelF0-H1-H2_sma3nz_stddevNorm                            0.096          0.054          0.028          0.069           0.07          0.053           0.04          0.063    
+logRelF0-H1-A3_sma3nz_amean                                 0.062          0.023         0.0065          0.012          0.032           0.02         0.0086          0.016    
+logRelF0-H1-A3_sma3nz_stddevNorm                           0.0024          0.012         0.0026         0.0016         0.0087          0.024         0.0044         0.0033    
+F1frequency_sma3nz_amean                                    0.025          0.036          0.044          0.017          0.015         0.0041          0.015          0.023    
+F1frequency_sma3nz_stddevNorm                               0.027           0.05          0.019         0.0059         0.0018          0.005         0.0055         0.0015    
+F1bandwidth_sma3nz_amean                                    0.014          0.017           0.04          0.012          0.043          0.035          0.071          0.039    
+F1bandwidth_sma3nz_stddevNorm                              0.0037          0.003         0.0017         0.0025         0.0008         0.0062         0.0034         0.0038    
+F1amplitudeLogRelF0_sma3nz_amean                           0.0049         0.0067         0.0018         0.0062         0.0058         0.0089         0.0062         0.0026    
+F1amplitudeLogRelF0_sma3nz_stddevNorm                      0.0085         0.0017          0.002         0.0047         0.0051         0.0029         0.0069         0.0029    
+F2frequency_sma3nz_amean                                    0.006         0.0034          0.016         0.0086         0.0031         0.0081         0.0091         0.0014    
+F2frequency_sma3nz_stddevNorm                              0.0085         0.0098          0.003         0.0054         0.0068           0.01         0.0068         0.0055    
+F2bandwidth_sma3nz_amean                                   0.0042         0.0073         0.0032         0.0022          0.024          0.011         0.0069          0.024    
+F2bandwidth_sma3nz_stddevNorm                               0.016         0.0028         0.0057          0.001          0.004         0.0041         0.0038         0.0054    
+F2amplitudeLogRelF0_sma3nz_amean                           0.0017         0.0043         0.0032          0.013         0.0085         0.0036         0.0051         0.0034    
+F2amplitudeLogRelF0_sma3nz_stddevNorm                      0.0059         0.0051          0.004         0.0076         0.0053         0.0038        0.00083         0.0023    
+F3frequency_sma3nz_amean                                    0.024          0.026          0.023          0.051           0.02          0.012           0.03          0.034    
+F3frequency_sma3nz_stddevNorm                              0.0086          0.016         0.0077         0.0028          0.004          0.003          0.005         0.0034    
+F3bandwidth_sma3nz_amean                                   0.0054         0.0025          0.019          0.002          0.026          0.014          0.042          0.024    
+F3bandwidth_sma3nz_stddevNorm                              0.0038         0.0033         0.0014         0.0061          0.012         0.0038         0.0014         0.0028    
+F3amplitudeLogRelF0_sma3nz_amean                           0.0042         0.0087           0.01         0.0079         0.0054         0.0036         0.0059         0.0023    
+F3amplitudeLogRelF0_sma3nz_stddevNorm                      0.0086         0.0015         0.0032         0.0032         0.0043         0.0029         0.0037         0.0012    
+alphaRatioV_sma3nz_amean                                   0.0042         0.0087         0.0087         0.0071          0.009          0.006         0.0046         0.0028    
+alphaRatioV_sma3nz_stddevNorm                               0.012          0.025          0.012          0.018          0.012         0.0005         0.0087          0.008    
+hammarbergIndexV_sma3nz_amean                              0.0028         0.0036         0.0058         0.0018         0.0033        0.00044         0.0019         0.0019    
+hammarbergIndexV_sma3nz_stddevNorm                         0.0035         0.0045          0.013         0.0041        0.00057         0.0059         0.0059         0.0027    
+slopeV0-500_sma3nz_amean                                    0.047          0.083           0.11          0.057          0.028          0.054          0.018           0.01    
+slopeV0-500_sma3nz_stddevNorm                               0.022          0.031          0.053          0.035         0.0062           0.01         0.0064         0.0087    
+slopeV500-1500_sma3nz_amean                                 0.018          0.015         0.0053          0.032         0.0056         0.0072         0.0025         0.0059    
+slopeV500-1500_sma3nz_stddevNorm                            0.013          0.024         0.0068          0.022         0.0093         0.0061         0.0039          0.013    
+spectralFluxV_sma3nz_amean                                  0.013          0.017         0.0011          0.016          0.054          0.021          0.051          0.029    
+spectralFluxV_sma3nz_stddevNorm                            0.0036         0.0053        0.00088          0.004         0.0022          0.009         0.0029         0.0021    
+mfcc1V_sma3nz_amean                                        0.0041         0.0045         0.0063         0.0048         0.0043         0.0058         0.0049          0.002    
+mfcc1V_sma3nz_stddevNorm                                   0.0035          0.005         0.0018          0.006         0.0014         0.0062         0.0039         0.0057    
+mfcc2V_sma3nz_amean                                         0.012         0.0024         0.0098           0.01         0.0046          0.003          0.004         0.0017    
+mfcc2V_sma3nz_stddevNorm                                   0.0038         0.0034         0.0043          0.002         0.0027         0.0015         0.0028         0.0029    
+mfcc3V_sma3nz_amean                                         0.002         0.0078         0.0019         0.0051         0.0052          0.004         0.0051         0.0068    
+mfcc3V_sma3nz_stddevNorm                                   0.0056         0.0035         0.0025         0.0049         0.0044         0.0019        0.00062         0.0036    
+mfcc4V_sma3nz_amean                                         0.012           0.01          0.011           0.01          0.015          0.015          0.009           0.01    
+mfcc4V_sma3nz_stddevNorm                                   0.0077         0.0025         0.0037         0.0079         0.0086         0.0037         0.0032          0.003    
+alphaRatioUV_sma3nz_amean                                   0.007           0.02         0.0048          0.023         0.0015         0.0042         0.0021         0.0058    
+hammarbergIndexUV_sma3nz_amean                             0.0074          0.013          0.023          0.019         0.0055         0.0062         0.0079         0.0037    
+slopeUV0-500_sma3nz_amean                                   0.019          0.036          0.077           0.03          0.018          0.039          0.017          0.011    
+slopeUV500-1500_sma3nz_amean                               0.0037         0.0059         0.0031         0.0053         0.0033         0.0036         0.0032         0.0023    
+spectralFluxUV_sma3nz_amean                                0.0041         0.0092         0.0052         0.0067         0.0048          0.008          0.016         0.0033    
+loudnessPeaksPerSec                                        0.0085         0.0029          0.014         0.0022         0.0057         0.0027         0.0077         0.0024    
+VoicedSegmentsPerSec                                       0.0073         0.0059         0.0023         0.0031         0.0037         0.0064         0.0026          0.001    
+MeanVoicedSegmentLengthSec                                 0.0062        0.00088         0.0034         0.0038         0.0035          0.006         0.0013         0.0033    
+StddevVoicedSegmentLengthSec                               0.0055         0.0032         0.0022         0.0056         0.0017         0.0044         0.0018         0.0074    
+MeanUnvoicedSegmentLength                                  0.0021         0.0047         0.0043         0.0069         0.0054           0.01         0.0038         0.0031    
+StddevUnvoicedSegmentLength                                0.0042         0.0025         0.0018         0.0039        0.00098          0.013         0.0051         0.0023    
+equivalentSoundLevel_dBp                                   0.0077          0.017          0.008          0.013          0.034          0.036           0.01          0.029    

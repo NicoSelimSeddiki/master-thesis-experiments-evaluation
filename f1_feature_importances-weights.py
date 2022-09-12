@@ -74,7 +74,7 @@ if __name__ == '__main__':
     testsSpeaker: str = sys.argv[2] if sys.argv[2] else '101M'
     experiment: str = sys.argv[3] if sys.argv[3] else 'SD'
     
-    speakerData: str = os.path.join(os.getcwd(), 'reports', testsSpeaker, 
+    speakerData: str = os.path.join(os.getcwd(), 'reports', '110M', 
         f"{experiment}-train-{trainSpeaker}_test-{testsSpeaker}"+
         f"_feat_importances.csv")
 
@@ -83,12 +83,12 @@ if __name__ == '__main__':
     blocknames: pd.Index= df.columns
     
     # Get feature names
-    feats: List[str] = constants_experiments.SI_labels[1:-1]
+    feats: List[str] = constants_experiments.SIP_labels[1:-1]
     
     # Function to make a Barplot
     fig, ax = survey(data=df, blocknames=blocknames, features=feats)
     fig.suptitle(
-        f"F1-over-Time, {experiment}-Experiment, Speaker {testsSpeaker}", 
+        f"Feature-Importances-Over-Time, {experiment}-Experiment, Speaker {testsSpeaker}", 
         x=PlotHelper.PlotHelper._x_title, 
         y=PlotHelper.PlotHelper._y_title,
         fontsize=PlotHelper.PlotHelper._suptitle_fontsize

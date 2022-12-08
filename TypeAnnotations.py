@@ -1,6 +1,5 @@
 from numpy.typing import ArrayLike
-from typing import (Any, Deque, Dict, Generator, Iterator, 
-    List, Tuple, TypeVar, Union)
+from typing import Any, Deque, Dict, Generator, Iterator, List, Tuple, TypeVar, Union
 
 # Date
 DateTime = TypeVar("DateTime")

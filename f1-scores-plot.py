@@ -3,7 +3,7 @@
 
 # 3rd Party Modules------------------------------------------------------------
 import numpy as np
-import pandas as pd
+import matplotlib.pyplot as plt
 
 # Custom Packages/Modules/Classes/Functions etc.-------------------------------
 from PlotHelper import PlotHelper
@@ -55,8 +55,7 @@ if __name__ == "__main__":
             [0.55, 0.68, 0.23, 0.00]], 
             dtype=np.float64
     )
-
-        # SI - F1 scores 
+ 
     f1_SI_Experiment_10_Feats: ArrayLike = np.array(
         [
             [0.63, 0.59, 0.65, 0.67],
@@ -70,46 +69,50 @@ if __name__ == "__main__":
             dtype=np.float64
     )
 
+    # SI - F1 scores 
     f1_SIP_Experiment_All_Feats: ArrayLike = np.array(
         [
-            [0.62, 0.72],
-            [0.78, 0.78],
-            [0.59, 0.74],
-            [0.72, 0.69],
-            [0.62, 0.79],
-            [0.80, 0.80],
-            [0.60, 0.53],
-            [0.67, 0.74]], 
+            [0.62, 0.74],
+            [0.78, 0.68],
+            [0.59, 0.79],
+            [0.72, 0.68],
+            [0.62, 0.75],
+            [0.80, 0.63],
+            [0.60, 0.68],
+            [0.67, 0.75]], 
             dtype=np.float64
     )
 
     f1_SIP_Experiment_10_Feats: ArrayLike = np.array(
         [
-            [0.61, 0.72],
-            [0.70, 0.74],
-            [0.57, 0.71],
-            [0.70, 0.74],
-            [0.68, 0.82],
-            [0.74, 0.77],
-            [0.61, 0.49],
-            [0.70, 0.75]], 
+            [0.61, 0.71],
+            [0.70, 0.70],
+            [0.57, 0.59],
+            [0.70, 0.62],
+            [0.68, 0.75],
+            [0.74, 0.63],
+            [0.61, 0.76],
+            [0.70, 0.68]], 
             dtype=np.float64
     )
 
 
-
     #--------------------------------------------------------------------------
-    speaker_names: List[str] = ['101M', '102M', '103M', '104M']
-    speaker_descr: List[str] = ['101M-test', '102M-test', '103M-test', 
-        '104M-test']
+    # expr = sys.argv[1]
+    # num_feat = sys.argv[2]
 
-    PlotHelper.lineplot(
+    speaker_names_ALL_SD_SI: List[str] = ['101M', '102M', '103M', '104M']
+    speaker_names_SIP: List[str] = ['111Mrec1', '114Frec1']
+
+    fig, ax = PlotHelper.lineplot(
         f1_SIP_Experiment_10_Feats[:, 0],
         f1_SIP_Experiment_10_Feats[:, 1],
-        # f1_SI_Experiment_10_Feats[:, 2],
-        # f1_SI_Experiment_10_Feats[:, 3],
-        name="f1-over time, Speaker-Independent-Personalized-Experiment-10-Best-Features",
-        description=["110Mrec1", "110Mrec2"],
+        # f1_SI_Experiment_All_Feats[:, 2],
+        # f1_SI_Experiment_All_Feats[:, 3],
+        # name=f"F1-Score, {expr}-Experiments-{num_feat}-Features",
+        description=speaker_names_SIP,
         xl='block 0_10 vs.',
         yl='f1-scores'
-        )    
+    )   
+
+    plt.show()
